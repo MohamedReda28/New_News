@@ -5,7 +5,7 @@ import 'package:project2/cubit/artical_cubit.dart';
 import 'package:project2/views/home_view.dart';
 
 void main() async {
-  runApp(DevicePreview(builder: (BuildContext context) => NewsApp()));
+  runApp(const NewsApp());
 
 }
 
@@ -16,10 +16,12 @@ class NewsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => ArticalCubit(),
-      child: MaterialApp(
+      child: const MaterialApp(
+
         debugShowCheckedModeBanner: false,
         home: HomeView(),
       ),
     );
   }
 }
+

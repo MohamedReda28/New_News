@@ -1,9 +1,4 @@
-
-
-
-
 class ArticalModel {
-
   final String? image;
 
   final String? title;

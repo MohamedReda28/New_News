@@ -12,7 +12,7 @@ class CustomAppBar extends StatelessWidget {
         ),
         SizedBox(height: 10,),
         Text(
-          'News',
+          'Programming',
           style: TextStyle( fontSize: 24),
         ),
       ],

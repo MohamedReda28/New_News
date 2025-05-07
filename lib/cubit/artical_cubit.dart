@@ -8,10 +8,10 @@ import 'package:project2/services/services.dart';
 class ArticalCubit extends Cubit<ArticalState> {
   ArticalCubit() : super(ArticalInitial());
 
-  getData() async{
+  getData(String? category) async{
     emit(ArticalLoading( ));
     try {
-     List<ArticalModel>articalList= await Services().getdata();
+     List<ArticalModel>articalList= await Services().getdata(category);
       emit(ArticalSuccess(articalList: articalList));
     } on Exception catch (e) {
       emit(Articalfailure(errorMessege: e.toString()));
